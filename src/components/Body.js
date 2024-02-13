@@ -49,11 +49,10 @@ const Body=()=>{
   }
   
     return(
-        <div className="body ml-[170.297] mr-[170.297]   ">
+        <div className="body ml-[170.297] mr-[170.297] ">
 
             
             <div className="container mx-auto p-4 flex  items-center ">
-            <Filter className="mr-10" listOfRestraunt={listOfRestraunt} setListOfRestraunt={setListOfRestraunt}/>
               <SearchBar className="mr-36S" listOfRestraunt={listOfRestraunt} setListOfRestraunt={setListOfRestraunt} filteredRes={filteredRes} setFilteredRes={setFilteredRes}/>
           
           </div>
@@ -67,6 +66,7 @@ const Body=()=>{
                 <div>
                 <h1 className="font-bold text-2xl shadow-sm mt-5">Restaurants with online food delivery for You</h1>
                 </div>
+                <Filter className="mr-10" listOfRestraunt={listOfRestraunt}  filteredRes={filteredRes} setFilteredRes={setFilteredRes}/>
                <div className="res-container flex justify-between flex-wrap mt-7">
               
               {
