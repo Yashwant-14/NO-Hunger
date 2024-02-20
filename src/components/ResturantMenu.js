@@ -13,11 +13,11 @@ const ResturantMenu = () =>{
   
     const resInfo=useResturantMenu(resId);
     console.log("ResturantMenu_Rendered");
-    const resName = resInfo?.cards[0]?.card?.card?.info ||{};
+    const resName = resInfo?.cards[2]?.card?.card?.info ||{};
 
-    const resItems= resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards ||{};
+    const resItems= resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards ||{};
 
-    const catagoryItems= resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter((e)=>{
+    const catagoryItems= resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter((e)=>{
          return e?.card?.card?.["@type"] ==="type.googleapis.com/swiggy.presentation.food.v2.ItemCategory";
 
 
