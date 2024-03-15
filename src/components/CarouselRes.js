@@ -39,7 +39,7 @@ const CarouselRes= ({carouselResData})=>{
         console.log(endIndx);
     }
     return (itemDisplay.length===0)? <Shimmer/>:(
-        <div  className="carousel-container  w-[1002.41] h-[379.8px] p-[1px] border-b-2 ">
+        <div  className="carousel-container  w-[1002.41] h-[379.8px] p-[1px] border-b-2 mx-auto">
             <div className="flex justify-center items-center justify-between ">
                 <h1 className="font-bold text-2xl shadow-sm">Top restaurant chains</h1>
             <div className="slider-control flex  mr-6 "> 

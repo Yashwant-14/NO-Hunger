@@ -38,7 +38,7 @@ const Carousel= ({carouselData})=>{
         console.log(endIndx);
     }
     return (itemDisplay.length===0)? <></>:(
-        <div  className="carousel-container  w-[1002.41] h-[256] p-[1px] border-b-2 ">
+        <div  className="carousel-container  w-[1002.41] h-[256] p-[1px] border-b-2 mx-auto ">
             <div className="flex justify-center items-center justify-between ">
                 <h1 className="font-bold text-2xl shadow-sm">What's on your mind?</h1>
             <div className="slider-control flex  mr-6 "> 

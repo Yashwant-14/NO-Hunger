@@ -56,13 +56,13 @@ const Body=()=>{
               <SearchBar className="mr-36S" listOfRestraunt={listOfRestraunt} setListOfRestraunt={setListOfRestraunt} filteredRes={filteredRes} setFilteredRes={setFilteredRes}/>
           
           </div>
-          <div><Carousel carouselData={carouselData}/></div>
+          <div className="mx-auto p-4 flex  items-center"><Carousel carouselData={carouselData}/></div>
 
           <CarouselRes carouselResData={carouselResData}/>
             
             
                {console.log("rendered-body")}
-               <div>
+               <div className="w-[1002.41] mx-auto ">
                 <div>
                 <h1 className="font-bold text-2xl shadow-sm mt-5">Restaurants with online food delivery for You</h1>
                 </div>
@@ -76,7 +76,7 @@ const Body=()=>{
             }
              
      
-          </div>
+               </div>
                </div>
             
         </div>

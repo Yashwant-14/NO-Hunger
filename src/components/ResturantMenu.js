@@ -13,11 +13,11 @@ const ResturantMenu = () =>{
   
     const resInfo=useResturantMenu(resId);
     console.log("ResturantMenu_Rendered");
-    const resName = resInfo?.cards[2]?.card?.card?.info ||{};
+    const resName = resInfo?.cards[0]?.card?.card?.info ||{};
 
-    const resItems= resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards ||{};
+    //const resItems= resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards ||{};
 
-    const catagoryItems= resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter((e)=>{
+    const catagoryItems= resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter((e)=>{
          return e?.card?.card?.["@type"] ==="type.googleapis.com/swiggy.presentation.food.v2.ItemCategory";
 
 
@@ -32,19 +32,19 @@ const ResturantMenu = () =>{
                 <div className="RestaurantHeader-Wrapper flex justify-between">
                     <div className="RestaurantName">
                         <div className="resName-Cuisines">
-                            <p className="font-bold text-xl">{resName.name}</p>
-                            <p className="text-xs text-gray-400">{resName.cuisines.join(",")}</p>
+                            <p className="font-bold text-xl">{resName?.name}</p>
+                            <p className="text-xs text-gray-400">{resName?.cuisines.join(",")}</p>
                         </div>
-                        <div className="text-xs text-gray-400">{resName.areaName}, {resName.sla.lastMileTravelString}</div>
+                        <div className="text-xs text-gray-400">{resName?.areaName}, {resName?.sla?.lastMileTravelString}</div>
                     </div>
                     <div className="resRating flex flex-col w-[63px] h-[70px] border p-2 rounded-md shadow-md cursor-pointer">
-                        <span className="font-bold pb-2 border-b">{resName.avgRatingString}⭐</span>
-                        <span className="text-[7px] mt-2 font-semibold">{resName.totalRatingsString}</span>
+                        <span className="font-bold pb-2 border-b">{resName?.avgRatingString}⭐</span>
+                        <span className="text-[7px] mt-2 font-semibold">{resName?.totalRatingsString}</span>
                     </div>
                 </div>
                 <div>
                     <ul className="flex text-sm text-gray-400">
-                        <li className="mr-10 text-sm font-bold flex  "><><img src={delivery} className="w-[22px]  mr-2"/></>{resName.sla.slaString} | {resName.costForTwoMessage}</li>
+                        <li className="mr-10 text-sm font-bold flex  "><><img src={delivery} className="w-[22px]  mr-2"/></>{resName?.sla?.slaString} | {resName?.costForTwoMessage}</li>
                         
                     </ul>
                 </div>

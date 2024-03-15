@@ -4,7 +4,7 @@ import { generateProxyUrl } from "../utils/constants";
 
 const useResturantMenu=(resId)=>{
     const[resInfo,setResInfo]=useState(null);
-    const resource= generateProxyUrl(MENU_DATA+resId);
+    const resource= MENU_DATA+resId;
     const fetchMenu= async()=>{
         const data= await fetch(resource);
         const json= await data.json();

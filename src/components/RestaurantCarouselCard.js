@@ -3,7 +3,7 @@ const RestaurantCarouselCard = (props) => {
     const {info} = props; // Destructuring props to ensure 'info' is defined
     //console.log(info);
     return (
-      <div className="res-card  m-2 w-[273px] h-[283.8px]  overflow-hidden transition-transform transform duration-300 ease-in-out hover:scale-90 mt-5">
+      <div className="res-card  m-2 w-[273px] h-[283.8px]  overflow-hidden transition-transform transform duration-300 ease-in-out hover:scale-90 mt-5 ">
         <div className=" relative w-[273px] h-[182px] rounded-lg  ">
         <img
           className="res-img  w-[273px] h-[182px] rounded-lg object-cover z-0"

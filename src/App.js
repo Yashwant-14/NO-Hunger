@@ -9,6 +9,9 @@ import { RouterProvider, createBrowserRouter, Outlet } from "react-router-dom";
 import Error from "./components/Error";
 import ResturantMenu from "./components/ResturantMenu";
 import Footer from "./components/Footer";
+import { Provider } from "react-redux";
+import appStore from "./utils/appStore"
+import Cart from "./components/Cart";
 
 
 /**
@@ -28,12 +31,14 @@ import Footer from "./components/Footer";
 
 const AppLayout=()=>{
     return(
-        <div className="app">
+        <Provider store={appStore}>
+            <div className="app">
             <Header/>
             {/* <Filter/> */}
             <Outlet/>
             <Footer/>
         </div>
+        </Provider>
     );
 };
 
@@ -59,7 +64,11 @@ const AppRoute= createBrowserRouter(
             {
                 path:"/resturants/:resId",
                 element: <ResturantMenu/>,
-            } 
+            } ,
+            {
+                path:"/cart",
+                element:<Cart/>,
+            }
             ],
             errorElement: <Error/>
         },
