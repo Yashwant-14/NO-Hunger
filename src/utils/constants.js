@@ -5,5 +5,5 @@ export const LOGO_URL= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSX
 export const MENU_DATA ="https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=22.480674808313108&lng=88.41162795767212&restaurantId="
 //"https://corsproxy.org/?"
 //https://thingproxy.freeboard.io/fetch/
-export const PROXY_CORS = "https://corsproxy.org/?";
+export const PROXY_CORS = "https://thingproxy.freeboard.io/fetch/";
 export const generateProxyUrl = (URL) => PROXY_CORS + encodeURIComponent(URL)
